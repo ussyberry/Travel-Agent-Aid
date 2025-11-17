@@ -5,68 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Agent Assistant</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Travel Agent Assistant</h1>
+    <div class="split-container">
+        <!-- Left Section - Maroon/Red Theme -->
+        <div class="left-section">
+            <div class="content-wrapper">
+                <div class="brand-header">
+                    <h1 class="brand-name">Travel Agent</h1>
+                    <h2 class="brand-subtitle">Assistant</h2>
+                </div>
 
-    <hr>
-    <h2>Flight Search</h2>
-    <form id="flight-search-form">
-        <label for="origin">Origin:</label>
-        <input type="text" id="origin" name="origin" required>
+                <!-- Flight Search -->
+                <section class="search-section">
+                    <h3 class="section-title">Flight Search</h3>
+                    <form id="flight-search-form" class="search-form">
+                        <div class="form-group">
+                            <label for="origin">Origin</label>
+                            <input type="text" id="origin" name="origin" placeholder="JFK" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input type="text" id="destination" name="destination" placeholder="LHR" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="departure_date">Departure</label>
+                                <input type="date" id="departure_date" name="departure_date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="adults">Adults</label>
+                                <input type="number" id="adults" name="adults" min="1" value="1" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Search Flights</button>
+                    </form>
+                    <div id="results" class="results-container"></div>
+                </section>
 
-        <label for="destination">Destination:</label>
-        <input type="text" id="destination" name="destination" required>
+                <!-- Visa Requirements -->
+                <section class="search-section">
+                    <h3 class="section-title">Visa Requirements</h3>
+                    <form id="visa-search-form" class="search-form">
+                        <div class="form-group">
+                            <label for="visa-origin">Origin Country</label>
+                            <input type="text" id="visa-origin" name="visa-origin" placeholder="US" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="visa-destination">Destination Country</label>
+                            <input type="text" id="visa-destination" name="visa-destination" placeholder="FR" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="visa-nationality">Nationality</label>
+                            <input type="text" id="visa-nationality" name="visa-nationality" placeholder="US" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Check Visa</button>
+                    </form>
+                    <div id="visa-results" class="results-container"></div>
+                </section>
+            </div>
+        </div>
 
-        <label for="departure_date">Departure Date:</label>
-        <input type="date" id="departure_date" name="departure_date" required>
+        <!-- Right Section - Patterned/Colorful Theme -->
+        <div class="right-section">
+            <div class="content-wrapper">
+                <!-- Nearest Airports -->
+                <section class="search-section">
+                    <h3 class="section-title">Find Nearest Airports</h3>
+                    <form id="nearest-airport-form" class="search-form">
+                        <div class="form-group">
+                            <label for="nearest-airport-keyword">Location</label>
+                            <input type="text" id="nearest-airport-keyword" name="keyword" placeholder="Paris" required>
+                        </div>
+                        <button type="submit" class="btn-secondary">Find Airports</button>
+                    </form>
+                    <div id="airport-results" class="results-container"></div>
+                </section>
 
-        <label for="adults">Adults:</label>
-        <input type="number" id="adults" name="adults" min="1" value="1" required>
+                <!-- Hotel Search -->
+                <section class="search-section">
+                    <h3 class="section-title">Hotel Search</h3>
+                    <form id="hotel-search-form" class="search-form">
+                        <div class="form-group">
+                            <label for="city-code">City Code</label>
+                            <input type="text" id="city-code" name="city-code" placeholder="NYC" required>
+                        </div>
+                        <button type="submit" class="btn-secondary">Search Hotels</button>
+                    </form>
+                    <div id="hotel-results" class="results-container"></div>
+                </section>
 
-        <button type="submit">Search Flights</button>
-    </form>
-    <div id="results"></div>
-
-    <hr>
-    <h2>Visa Requirements</h2>
-    <form id="visa-search-form">
-        <label for="visa-origin">Origin Country Code:</label>
-        <input type="text" id="visa-origin" name="visa-origin" required>
-        <label for="visa-destination">Destination Country Code:</label>
-        <input type="text" id="visa-destination" name="visa-destination" required>
-        <label for="visa-nationality">Nationality Country Code:</label>
-        <input type="text" id="visa-nationality" name="visa-nationality" required>
-        <button type="submit">Check Visa</button>
-    </form>
-    <div id="visa-results"></div>
-
-    <hr>
-    <h2>Find Nearest Airports</h2>
-    <form id="nearest-airport-form">
-        <label for="nearest-airport-keyword">Location Keyword:</label>
-        <input type="text" id="nearest-airport-keyword" name="keyword" required>
-        <button type="submit">Find Airports</button>
-    </form>
-    <div id="airport-results"></div>
-
-    <hr>
-    <h2>Hotel Search</h2>
-    <form id="hotel-search-form">
-        <label for="city-code">City Code:</label>
-        <input type="text" id="city-code" name="city-code" required>
-        <button type="submit">Search Hotels</button>
-    </form>
-    <div id="hotel-results"></div>
-
-    <hr>
-    <h2>Activity Search</h2>
-    <form id="activity-search-form">
-        <label for="activity-keyword">Location Keyword:</label>
-        <input type="text" id="activity-keyword" name="keyword" required>
-        <button type="submit">Search Activities</button>
-    </form>
-    <div id="activity-results"></div>
+                <!-- Activity Search -->
+                <section class="search-section">
+                    <h3 class="section-title">Activity Search</h3>
+                    <form id="activity-search-form" class="search-form">
+                        <div class="form-group">
+                            <label for="activity-keyword">Location</label>
+                            <input type="text" id="activity-keyword" name="keyword" placeholder="Paris" required>
+                        </div>
+                        <button type="submit" class="btn-secondary">Search Activities</button>
+                    </form>
+                    <div id="activity-results" class="results-container"></div>
+                </section>
+            </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
