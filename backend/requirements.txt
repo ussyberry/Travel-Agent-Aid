@@ -1,0 +1,4 @@
+Flask==2.2.2
+python-dotenv==0.21.0
+requests==2.28.1
+amadeus==5.0.0
