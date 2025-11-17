@@ -34,7 +34,7 @@ Before you begin, ensure you have the following installed:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/Travel-Agent-Aid.git
+git clone https://github.com/ussyberry/Travel-Agent-Aid.git
 cd Travel-Agent-Aid
 ```
 
