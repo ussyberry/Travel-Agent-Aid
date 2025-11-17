@@ -8,6 +8,66 @@
 </head>
 <body>
     <h1>Travel Agent Assistant</h1>
+
+    <hr>
+    <h2>Flight Search</h2>
+    <form id="flight-search-form">
+        <label for="origin">Origin:</label>
+        <input type="text" id="origin" name="origin" required>
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required>
+
+        <label for="departure_date">Departure Date:</label>
+        <input type="date" id="departure_date" name="departure_date" required>
+
+        <label for="adults">Adults:</label>
+        <input type="number" id="adults" name="adults" min="1" value="1" required>
+
+        <button type="submit">Search Flights</button>
+    </form>
+    <div id="results"></div>
+
+    <hr>
+    <h2>Visa Requirements</h2>
+    <form id="visa-search-form">
+        <label for="visa-origin">Origin Country Code:</label>
+        <input type="text" id="visa-origin" name="visa-origin" required>
+        <label for="visa-destination">Destination Country Code:</label>
+        <input type="text" id="visa-destination" name="visa-destination" required>
+        <label for="visa-nationality">Nationality Country Code:</label>
+        <input type="text" id="visa-nationality" name="visa-nationality" required>
+        <button type="submit">Check Visa</button>
+    </form>
+    <div id="visa-results"></div>
+
+    <hr>
+    <h2>Find Nearest Airports</h2>
+    <form id="nearest-airport-form">
+        <label for="nearest-airport-keyword">Location Keyword:</label>
+        <input type="text" id="nearest-airport-keyword" name="keyword" required>
+        <button type="submit">Find Airports</button>
+    </form>
+    <div id="airport-results"></div>
+
+    <hr>
+    <h2>Hotel Search</h2>
+    <form id="hotel-search-form">
+        <label for="city-code">City Code:</label>
+        <input type="text" id="city-code" name="city-code" required>
+        <button type="submit">Search Hotels</button>
+    </form>
+    <div id="hotel-results"></div>
+
+    <hr>
+    <h2>Activity Search</h2>
+    <form id="activity-search-form">
+        <label for="activity-keyword">Location Keyword:</label>
+        <input type="text" id="activity-keyword" name="keyword" required>
+        <button type="submit">Search Activities</button>
+    </form>
+    <div id="activity-results"></div>
+
     <script src="app.js"></script>
 </body>
 </html>

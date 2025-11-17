@@ -13,7 +13,7 @@ The goal of this project is to create an AI-powered application that helps trave
     * Airport & City Search
     * Hotel Search
     * Airport Nearest Relevant
-* **External Visa Service:** (To be determined)
+* **External Visa Service:** Sherpa
 
 ## Development Guidelines
 
